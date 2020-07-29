@@ -1,0 +1,284 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900);
+/*Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+body {
+    font: 12px/18px Arial, sans-serif;
+}
+
+body, html { 
+    width: 100%;
+    height: 100%;
+}
+/*Reset end*/
+
+/*Loader*/
+#loader {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    z-index: 1000;
+}
+
+#loader div{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #DDDDDD;
+    border-bottom: 2px solid #052C6E;
+    border-radius: 50%;
+    animation: loader 1.5s linear infinite;
+    display: block;
+}
+
+@keyframes loader
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+    
+}
+/*Loader end*/
+
+/*General styles*/
+
+#mainwrapper{
+    position: absolute;
+    width: 100%;
+    min-width: 100px;
+    min-height: 100%;
+    height: auto !important;
+    display: none;
+    font-family: Roboto;
+}
+
+@keyframes soft-appear
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+    
+}
+
+/*General styles end*/
+
+/*Стили для header*/
+.header-panel{
+    width: calc(100% - 60px);
+    padding: 30px;
+    background: linear-gradient(90deg, #757FC5 0%, #5550A0 100%);
+    position: relative;
+}
+
+.header-panel h1{
+    font-size: 28px;
+    color: #fff;
+    text-align: left;
+    display: inline-block;
+}
+
+.header-panel .head-option{
+   position: absolute;
+   right: 30px;
+   cursor: pointer;
+}
+
+.header-panel img{
+    height: 20px;
+}
+
+.header-panel img:hover{
+    transform: scale(1.3);
+}
+
+.header-panel a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+}
+/*End*/
+
+/*Стили форм*/
+.nav-form{
+    margin: 50px auto;
+}
+
+.nav-form a{
+    font-size: 20px;
+    padding: 15px 30px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(90deg, #757FC5 0%, #5550A0 100%);
+    box-shadow: 0px 15px 40px rgba(87, 83, 163, 0.35);
+    -moz-box-shadow: 0px 15px 40px rgba(87, 83, 163, 0.35);
+    -webkit-box-shadow: 0px 15px 40px rgba(87, 83, 163, 0.35);
+}
+
+.nav-form .active-link{
+    background: linear-gradient(90deg, #757FC5 0%, #5550A0 20%);
+    color: #cec0ea;
+}
+
+.form-block{
+    width: 500px;
+    background-color: #eaeaea;
+    padding: 50px;
+    margin: 0 auto;
+    display: none;
+    animation: soft-appear 1s linear;
+}
+
+.server-answer-block{
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+    background-color: #fff;
+    padding: 50px;
+    font-size: 24px;
+    display: none;
+}
+
+.active-form{
+    display: block;
+}
+
+.form-block legend{
+    text-align: center;
+    font-size: 24px;
+    line-height: 26px;
+}
+
+.form-block label{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.form-block input{
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    border: 0;
+}
+
+.form-block button{
+    margin-top: 40px;
+    width: 100%;
+    font-size: 24px;
+    border: 0;
+    padding: 20px;
+    color: #fff;
+    background: linear-gradient(90deg, #757FC5 0%, #5550A0 100%);
+    box-shadow: 0px 15px 40px rgba(87, 83, 163, 0.35);
+    -moz-box-shadow: 0px 15px 40px rgba(87, 83, 163, 0.35);
+    -webkit-box-shadow: 0px 15px 40px rgba(87, 83, 163, 0.35);
+    cursor: pointer;
+}
+
+.form-block button:hover{
+    transform: scale(1.05);
+}
+/*End*/
+
+/*Стили пополнения счёта*/
+.refill-block{
+    padding: 50px;
+    background-color: #eaeaea;
+    border: 5px dashed black;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+}
+
+.refill-block .sum{
+    font-size: 40px;
+    display: block;
+    width: 100%;
+    cursor: default;
+    text-align: center;
+}
+
+.refill-block a{
+    margin-top: 70px;
+    display: block;
+    width: calc(100% - 40px);
+    padding: 20px;
+    font-size: 20px;
+    background: linear-gradient(90deg, #757FC5 0%, #5550A0 100%);
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.refill-block a:hover{
+    transform: scale(1.05);
+}
+/*End*/
+
+/*Стили настроек*/
+    
+/*End*/
